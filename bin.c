@@ -1,5 +1,5 @@
 #include <stdio.h>
-int bin(int a) {
+void bin(int a) {
 	for (int i = 128; i > 0; i /= 2) {
 		if (i & a) {
 			printf("1");
@@ -8,5 +8,4 @@ int bin(int a) {
 		}
 	}
 	printf("\n");
-	return 0;
 }

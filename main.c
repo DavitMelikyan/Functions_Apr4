@@ -1,15 +1,15 @@
 #include <stdio.h>
-int multab(int a);
-int onetantable();
+void multab(int a);
+void onetantable();
 int fac(int n);
 int sumdig(int num);
-int baj(int a);
+void baj(int a);
 int power(int num, int exp);
 int rev(int a);
-int hex(int num);
+void hex(int num, char* arr,const int size);
 int fibo(int n);
-int bin(int num);
-
+void bin(int num);
+int parztvgum(int num);
 int main() {
 //	task1
 	int num = 0;
@@ -35,7 +35,11 @@ int main() {
 	
 //	task5
 	int number = 1;
-	baj(number);	
+	baj(number);
+	
+//	task6
+	int numpar = 12;	
+	printf("%d \n", parztvgum(numpar));
 
 // 	task7
 	int nump = 3;
@@ -47,8 +51,10 @@ int main() {
 	printf("Reversed number of %d is %d \n", numrev, rev(numrev));
 
 // 	task9
-	int hexnum = 1234;
-	hex(hexnum);
+	int hexnum = 111234;
+	const int size = 5;
+	char arr[size] = {};
+	hex(hexnum, arr, size);
 
 //	task10
 	int nfib = 5;
